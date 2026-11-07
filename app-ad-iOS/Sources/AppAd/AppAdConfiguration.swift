@@ -44,6 +44,22 @@ public struct AppAdItem: Codable, Identifiable, Equatable, Sendable {
         localizedValue(locale: locale, keyPath: \.description) ?? description
     }
 
+    /// Card text uses the localized store name: "Brand - Short description".
+    /// Split only once, preserving any later hyphens in the short description.
+    func displayText(locale: Locale) -> (name: String, description: String) {
+        let localized = localizedName(locale: locale)
+        guard let separator = localized.firstIndex(of: "-") else {
+            return (localized, localizedDescription(locale: locale))
+        }
+        let brand = String(localized[..<separator]).trimmingCharacters(in: .whitespacesAndNewlines)
+        let subtitle = String(localized[localized.index(after: separator)...])
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+        guard !brand.isEmpty, !subtitle.isEmpty else {
+            return (localized, localizedDescription(locale: locale))
+        }
+        return (brand, subtitle)
+    }
+
     private func localizedValue(locale: Locale, keyPath: KeyPath<AppAdTranslation, String?>) -> String? {
         for candidate in AppAdLocalization.candidates(for: locale) {
             // Sorting makes equivalent language tags deterministic.

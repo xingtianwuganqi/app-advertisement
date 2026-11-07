@@ -105,6 +105,29 @@ final class AppAdTests: XCTestCase {
         XCTAssertEqual(resolved("ja_JP", ["JA"]), "ja_JP")
     }
 
+    func testCardsUseLocalizedStoreNameForBrandAndSubtitle() throws {
+        let config = try AppAdConfiguration.bundled()
+        let wall = try XCTUnwrap(config.apps.first { $0.id == "com.jingjun.plan" })
+        let chinese = wall.displayText(locale: Locale(identifier: "zh-Hans"))
+        XCTAssertEqual(chinese.name, "Text Wall")
+        XCTAssertEqual(chinese.description, "文字壁纸与小组件")
+        let reel = try XCTUnwrap(config.apps.first { $0.id == "com.junjing.motiontext" })
+        let japanese = reel.displayText(locale: Locale(identifier: "ja"))
+        XCTAssertEqual(japanese.name, "TextReel")
+        XCTAssertEqual(japanese.description, "文字動画と読み上げ")
+        let locale = AppAdLocalization.contentLocale(for: Locale(identifier: "ja"), hostLocalizations: ["en"])
+        XCTAssertEqual(reel.displayText(locale: locale).description, "Text Video Maker")
+    }
+
+    func testCardTextPreservesLaterHyphensAndHandlesPlainNames() {
+        let url = URL(string: "https://apps.apple.com/app/id123")!
+        let app = AppAdItem(id: "test", name: "Brand - Text-to-speech", description: "Long description", appStoreURL: url)
+        XCTAssertEqual(app.displayText(locale: Locale(identifier: "en")).description, "Text-to-speech")
+        let plain = AppAdItem(id: "plain", name: "Brand", description: "Fallback description", appStoreURL: url)
+        XCTAssertEqual(plain.displayText(locale: Locale(identifier: "en")).name, "Brand")
+        XCTAssertEqual(plain.displayText(locale: Locale(identifier: "en")).description, "Fallback description")
+    }
+
     func testBundledCatalogAndLocalIconsLoad() throws {
         let config = try AppAdConfiguration.bundled()
         XCTAssertFalse(config.apps.isEmpty)

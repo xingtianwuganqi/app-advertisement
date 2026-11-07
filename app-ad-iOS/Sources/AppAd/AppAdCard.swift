@@ -16,37 +16,48 @@ struct AppAdCard: View {
     private var contentLocale: Locale { AppAdLocalization.contentLocale(for: locale) }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
-            if let title {
-                Text(title)
-                    .font(.caption.weight(.medium))
-                    .foregroundStyle(.secondary)
-            }
-            Button {
-                onTap?(app)
-                openURL(app.appStoreURL)
-            } label: {
+        let display = app.displayText(locale: contentLocale)
+        Button {
+            onTap?(app)
+            openURL(app.appStoreURL)
+        } label: {
+            VStack(alignment: .leading, spacing: 12) {
+                if let title {
+                    Text(title)
+                        .font(.caption.weight(.medium))
+                        .foregroundStyle(.secondary)
+                }
                 HStack(alignment: .center, spacing: 12) {
                     AppAdIcon(app: app)
                         .frame(width: 60, height: 60)
                         .clipShape(RoundedRectangle(cornerRadius: 14))
                         .accessibilityHidden(true)
                     VStack(alignment: .leading, spacing: 5) {
-                        Text(app.localizedName(locale: contentLocale)).font(.headline).foregroundStyle(.primary)
-                        Text(app.localizedDescription(locale: contentLocale)).font(.subheadline).foregroundStyle(.secondary)
-                            .fixedSize(horizontal: false, vertical: true)
+                        Text(display.name)
+                            .font(.headline)
+                            .foregroundStyle(.primary)
+                            .lineLimit(1)
+                            .truncationMode(.tail)
+                        Text(display.description)
+                            .font(.subheadline)
+                            .foregroundStyle(.secondary)
+                            .lineLimit(1)
+                            .truncationMode(.tail)
                     }
-                    Spacer(minLength: 0)
-                    Text(actionTitle ?? AppAdLocalization.string("ad.action", locale: locale)).font(.subheadline.weight(.semibold))
-                        .foregroundStyle(Color.accentColor)
+                    .frame(maxWidth: .infinity, alignment: .leading)
+                    Image(systemName: "chevron.right")
+                        .font(.subheadline.weight(.semibold))
+                        .foregroundStyle(.secondary)
+                        .accessibilityHidden(true)
                 }
-                .contentShape(Rectangle())
             }
-            .buttonStyle(.plain)
-            .accessibilityHint(Text(AppAdLocalization.string("ad.hint", locale: locale)))
+            .padding(16)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .background(Color.secondary.opacity(0.08), in: RoundedRectangle(cornerRadius: 20))
+            .contentShape(RoundedRectangle(cornerRadius: 20))
         }
-        .padding(16)
-        .background(Color.secondary.opacity(0.08), in: RoundedRectangle(cornerRadius: 20))
+        .buttonStyle(.plain)
+        .accessibilityHint(Text(actionTitle ?? AppAdLocalization.string("ad.hint", locale: locale)))
     }
 }
 

@@ -43,10 +43,10 @@ import AppAd
 AppAdView()
 ```
 
-可传入 `title`、`actionTitle` 自定义文案，通过 `.tint(...)` 设置主题颜色：
+可传入 `title` 自定义标题，通过 `.tint(...)` 设置主题颜色。`actionTitle` 用于自定义点击操作的无障碍提示，卡片右侧始终显示箭头：
 
 ```swift
-AppAdView(title: "我的其他应用", actionTitle: "看看") { app in
+AppAdView(title: "我的其他应用") { app in
     print("点击了：\(app.name)")
 }
 ```
@@ -200,7 +200,7 @@ struct OtherAppsPage: View {
 AppAdListView(
     currentAppID: "com.junjing.pureride",
     title: "我的其他应用",
-    actionTitle: "查看"
+    actionTitle: "在 App Store 中查看"
 ) { app in
     print("点击了：\(app.id)")
 }
@@ -216,3 +216,15 @@ navigationController?.pushViewController(controller, animated: true)
 ```
 
 演示工程同时展示随机单条广告和完整列表。
+
+
+## 广告卡片样式
+
+随机广告和列表共用相同的卡片样式。先按主 App 语言范围选择本地化名称，再用第一个 `-` 拆分：前半部分显示为应用名称，后半部分显示为简短介绍，并去掉两端空格。例如：
+
+- `Text Wall - 文字壁纸与小组件` → 标题 `Text Wall`，介绍 `文字壁纸与小组件`。
+- `TextReel-Text Video Maker` → 标题 `TextReel`，介绍 `Text Video Maker`。
+
+简短介绍直接取自 JSON 中各语言的 `localizations.<语言>.name` 后半部分，因此翻译仍统一在库中维护。主 App 不支持当前语言时，使用英文名称拆分后的标题和介绍。后半部分中的其他连字符会保留；名称没有有效分隔符时，显示完整名称并使用原有本地化 `description`。
+
+右侧使用 `chevron.right` 图标，不显示“查看／前往 App”等文字。名称和介绍各显示一行，超出部分以省略号截断。整张卡片（包含标题、内边距留白、图标和箭头）均可点击跳转 App Store；默认无障碍提示继续按语言显示，传入 `actionTitle` 可覆盖该提示。
