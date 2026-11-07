@@ -1,0 +1,158 @@
+{
+  "apps": [
+    {
+      "id": "com.jingjun.plan",
+      "name": "Text Wall - Quote Wallpapers",
+      "description": "Words for your day, wallpapers in your style. Turn a thought into six layouts, then keep daily inspiration, favorites or your own words close with widgets.",
+      "iconName": "text-wall.png",
+      "appStoreURL": "https://apps.apple.com/app/id6448674789",
+      "isEnabled": true,
+      "localizations": {
+        "zh-Hans": {
+          "name": "Text Wall - 文字壁纸与小组件",
+          "description": "让一句话，陪你过好每一天。发现每日文字灵感，把自己的话生成六款风格壁纸，再将每日一句、收藏或个人文字放进桌面与锁屏小组件。"
+        },
+        "zh-Hant": {
+          "name": "Text Wall - 文字桌布與小工具",
+          "description": "讓一句話，陪你好好過每一天。探索每日文字靈感，將自己的話變成六款風格桌布，再把每日一句、收藏或個人文字放進主畫面與鎖定畫面小工具。"
+        },
+        "ja": {
+          "name": "Text Wall - 文字壁紙とウィジェット",
+          "description": "ひとつの言葉で、毎日を心地よく。今日のひと言に出会い、自分の言葉から6つの壁紙レイアウトを作成。お気に入りや自分で書いた文章を、ホーム画面やロック画面のウィジェットにも。"
+        },
+        "ko": {
+          "name": "Text Wall - 글귀 배경화면과 위젯",
+          "description": "짧은 한 문장으로 더 다정한 하루를. 오늘의 글귀를 만나고, 나의 문장으로 여섯 가지 배경화면을 만들어 보세요. 매일의 글귀, 즐겨찾기, 직접 쓴 글을 홈 화면과 잠금 화면 위젯으로도 만날 수 있어요."
+        },
+        "en": {
+          "name": "Text Wall - Quote Wallpapers",
+          "description": "Words for your day, wallpapers in your style. Turn a thought into six layouts, then keep daily inspiration, favorites or your own words close with widgets."
+        }
+      }
+    },
+    {
+      "id": "com.junjing.motiontext",
+      "name": "TextReel-Text Video Maker",
+      "description": "Choose and preview system voices, import TXT or Markdown text, and duplicate your style templates. Turn your words into animated videos and M4A voiceovers.",
+      "iconName": "textreel.png",
+      "appStoreURL": "https://apps.apple.com/app/id6797247354",
+      "isEnabled": true,
+      "localizations": {
+        "en": {
+          "name": "TextReel-Text Video Maker",
+          "description": "Choose and preview system voices, import TXT or Markdown text, and duplicate your style templates. Turn your words into animated videos and M4A voiceovers."
+        },
+        "zh-Hans": {
+          "name": "TextReel-文字视频与配音",
+          "description": "选择并试听设备上的系统声音，导入 TXT 或 Markdown 文字，复制个人样式模板。让一段文字变成动态视频或独立 M4A 配音，创作内容在设备本地处理。"
+        },
+        "zh-Hant": {
+          "name": "TextReel-文字影片與配音",
+          "description": "選擇並試聽裝置上的系統聲音，匯入 TXT 或 Markdown 文字，複製個人樣式範本。讓一段文字變成動態影片或獨立 M4A 配音，創作內容在裝置端處理。"
+        },
+        "ja": {
+          "name": "TextReel-文字動画と読み上げ",
+          "description": "デバイスのシステム音声を選択・試聴し、TXTやMarkdownの文章を読み込み、スタイルテンプレートを複製。文章から文字アニメ動画やM4A音声をデバイス上で作成できます。"
+        },
+        "ko": {
+          "name": "TextReel-텍스트 영상과 음성",
+          "description": "기기의 시스템 음성을 선택하고 미리 들어 보세요. TXT와 Markdown 텍스트 가져오기, 스타일 템플릿 복제로 글을 움직이는 영상과 M4A 내레이션으로 만들어 보세요."
+        },
+        "fr": {
+          "name": "TextReel-Vidéos texte",
+          "description": "Choisissez une voix système, importez du texte TXT ou Markdown et dupliquez vos modèles. Créez des vidéos animées et des voix off M4A sur votre appareil."
+        },
+        "de": {
+          "name": "TextReel-Textvideos",
+          "description": "Systemstimmen auswählen und anhören, TXT- oder Markdown-Texte importieren und Stilvorlagen duplizieren. Erstelle animierte Videos und M4A-Audio auf deinem Gerät."
+        },
+        "th": {
+          "name": "TextReel-วิดีโอข้อความ",
+          "description": "เลือกและฟังตัวอย่างเสียงระบบ นำเข้าข้อความ TXT หรือ Markdown และทำสำเนาเทมเพลต เปลี่ยนข้อความเป็นวิดีโอเคลื่อนไหวและเสียง M4A บนอุปกรณ์"
+        },
+        "es": {
+          "name": "TextReel-Vídeos de texto",
+          "description": "Elige y escucha voces del sistema, importa texto TXT o Markdown y duplica plantillas. Convierte tus palabras en vídeos animados y voces M4A en tu dispositivo."
+        },
+        "vi": {
+          "name": "TextReel-Video chữ",
+          "description": "Chọn và nghe thử giọng hệ thống, nhập văn bản TXT hoặc Markdown và nhân bản mẫu. Biến câu chữ thành video chuyển động và lời đọc M4A trên thiết bị."
+        }
+      }
+    },
+    {
+      "id": "com.junjing.pureride",
+      "name": "VeloPure - Bike Computer & GPS",
+      "description": "Make your iPhone a cycling computer. Customize your dashboard, follow saved routes, explore ride stats and share your ride as a video.",
+      "iconName": "velopure.png",
+      "appStoreURL": "https://apps.apple.com/app/id6799878817",
+      "isEnabled": true,
+      "localizations": {
+        "en": {
+          "name": "VeloPure - Bike Computer & GPS",
+          "description": "Make your iPhone a cycling computer. Customize your dashboard, follow saved routes, explore ride stats and share your ride as a video."
+        },
+        "zh-Hans": {
+          "name": "极简骑行 - 骑行码表与轨迹记录",
+          "description": "把 iPhone 变成你的骑行码表。自定义数据布局，跟随收藏路线，查看骑行统计与曲线，再用轨迹视频分享旅程。无需注册，记录保存在本机。"
+        },
+        "zh-Hant": {
+          "name": "極簡騎行 - 騎行碼表與軌跡記錄",
+          "description": "把 iPhone 變成你的騎行碼表。自訂資料版面、跟隨收藏路線、查看統計與曲線，再用路線影片分享旅程。無需註冊，紀錄儲存在裝置上。"
+        },
+        "ja": {
+          "name": "VeloPure - サイクルメーター・GPS記録",
+          "description": "iPhoneを見やすいサイクルコンピューターに。表示をカスタマイズし、保存したルートをたどり、走行データを分析。動画でライドを共有できます。"
+        },
+        "ko": {
+          "name": "VeloPure - 자전거 속도계·GPS 기록",
+          "description": "iPhone을 나만의 자전거 속도계로 사용하세요. 화면을 맞춤 설정하고 저장한 경로를 따라가며, 라이딩 통계와 공유 영상을 만나보세요."
+        },
+        "fr": {
+          "name": "VeloPure - Compteur vélo GPS",
+          "description": "Transformez votre iPhone en compteur vélo. Personnalisez l'écran, suivez vos parcours enregistrés et partagez vos sorties en vidéo."
+        },
+        "de": {
+          "name": "VeloPure - Fahrradtacho & GPS",
+          "description": "Dein iPhone als Fahrradtacho: Passe die Anzeige an, folge gespeicherten Strecken, entdecke deine Tourenstatistik und teile deine Fahrt als Video."
+        },
+        "th": {
+          "name": "VeloPure - ไมล์จักรยาน GPS",
+          "description": "เปลี่ยน iPhone เป็นไมล์จักรยาน ปรับหน้าจอ ติดตามเส้นทางที่บันทึกไว้ ดูสถิติการปั่น และแชร์ทริปเป็นวิดีโอ"
+        },
+        "es": {
+          "name": "VeloPure - Ciclocomputador GPS",
+          "description": "Convierte tu iPhone en un ciclocomputador. Personaliza la pantalla, sigue rutas guardadas, consulta tus estadísticas y comparte tus salidas en vídeo."
+        },
+        "vi": {
+          "name": "VeloPure - Đồng hồ xe đạp GPS",
+          "description": "Biến iPhone thành đồng hồ đạp xe. Tùy chỉnh màn hình, đi theo lộ trình đã lưu, xem thống kê và chia sẻ chuyến đi bằng video."
+        },
+        "nl": {
+          "name": "VeloPure - Fietscomputer & GPS",
+          "description": "Maak van je iPhone een fietscomputer. Pas je scherm aan, volg opgeslagen routes, bekijk je ritstatistieken en deel je rit als video."
+        },
+        "nb": {
+          "name": "VeloPure - Sykkelcomputer GPS",
+          "description": "Gjør iPhone til en sykkelcomputer. Tilpass visningen, følg lagrede ruter, se turstatistikk og del sykkelturen som video."
+        },
+        "pt": {
+          "name": "VeloPure - Ciclocomputador GPS",
+          "description": "Transforme o iPhone num ciclocomputador. Personalize o ecrã, siga percursos guardados, veja as estatísticas e partilhe as suas pedaladas em vídeo."
+        },
+        "is": {
+          "name": "VeloPure - Hjólatölva og GPS",
+          "description": "Breyttu iPhone í hjólatölvu. Sérsníddu skjáinn, fylgdu vistuðum leiðum, skoðaðu tölfræði og deildu hjólaferðinni sem myndskeiði."
+        },
+        "da": {
+          "name": "VeloPure - Cykelcomputer & GPS",
+          "description": "Gør din iPhone til en cykelcomputer. Tilpas skærmen, følg gemte ruter, se dine turstatistikker og del cykelturen som video."
+        },
+        "it": {
+          "name": "VeloPure - Ciclocomputer e GPS",
+          "description": "Trasforma iPhone in un ciclocomputer. Personalizza lo schermo, segui percorsi salvati, consulta le statistiche e condividi le uscite in video."
+        }
+      }
+    }
+  ]
+}

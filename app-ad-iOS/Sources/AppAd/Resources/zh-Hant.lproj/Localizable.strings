@@ -1,0 +1,6 @@
+"ad.title" = "探索更多應用程式";
+"ad.action" = "查看";
+"ad.hint" = "在 App Store 中查看此應用程式";
+"error.resource" = "找不到廣告設定：%@.json";
+"error.invalid" = "廣告設定無效：%@，請檢查名稱、ID 和 HTTPS 連結。";
+"error.duplicate" = "廣告 ID 重複：%@";

@@ -1,0 +1,6 @@
+"ad.title" = "More apps";
+"ad.action" = "View";
+"ad.hint" = "View this app on the App Store";
+"error.resource" = "Ad configuration not found: %@.json";
+"error.invalid" = "Invalid ad configuration: %@. Check the name, ID and HTTPS URLs.";
+"error.duplicate" = "Duplicate ad ID: %@";

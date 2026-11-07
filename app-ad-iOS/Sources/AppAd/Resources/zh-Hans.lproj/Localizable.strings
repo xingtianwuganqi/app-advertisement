@@ -1,0 +1,6 @@
+"ad.title" = "发现更多应用";
+"ad.action" = "查看";
+"ad.hint" = "在 App Store 中查看此应用";
+"error.resource" = "找不到广告配置：%@.json";
+"error.invalid" = "广告配置无效：%@，请检查名称、ID 和 HTTPS 链接。";
+"error.duplicate" = "广告 ID 重复：%@";
